@@ -1,5 +1,5 @@
-# Data-Visualization
+# Advanced Topics in Database Technology and Applications
 
-Vasilis Nikas, AM: 3143
 Evangelos Iliadis, AM:3117
+Vasilis Nikas, AM: 3143
 
