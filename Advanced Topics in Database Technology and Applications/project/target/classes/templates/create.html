@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="#" th:action="@{/passMeDataNaiveD3}" th:object="${form}"
+  method="post">
+    <fieldset>
+        <input type="submit" id="submitButton" th:value="ShowBarChart">
+        <input type="reset" id="resetButton" name="reset" th:value="Reset"/>
+        <table>
+            <thead>
+                <tr>
+                    <th> Country</th>
+                    <th> Year</th>
+                    <th> Indicator</th>
+                </tr>
+            </thead>
+            <tbody>
+            <form method="get" action="welcome" id="myForm">
+                <tr th:each="book, itemStat : *{newmes}">
+                	<td><input th:field="*{newmes[__${itemStat.index}__].country_name}" /></td>
+                    <td><input type="text" id="labelValue1" name="labelValue" value = "text" th:field="*{newmes[__${itemStat.index}__].year}" /></td>
+                    <td><input th:field="*{newmes[__${itemStat.index}__].indicator}" /></td>   
+                </tr>
+            </form>
+            </tbody>
+        </table>
+    </fieldset>
+</form>
+</body>
+<script>
+	var text=document.getElementById('labelValue1').value;
+	console.log(text);
+</script>
+</html>
